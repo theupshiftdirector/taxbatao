@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRA Calculator | Calculate HRA Exemption Online - Tax Batao</title>
+    <meta name="description" content="Free HRA exemption calculator for FY 2025-26. Calculate House Rent Allowance exemption under Section 10(13A). Find how much HRA is tax-exempt based on your salary, rent paid and city.">
+    <meta name="keywords" content="hra calculator, hra exemption calculator, house rent allowance calculator, hra tax exemption, section 10 13a, hra calculation formula, hra exemption rules">
+    <link rel="canonical" href="https://taxbatao.com/hra-calculator">
+    <meta property="og:title" content="HRA Calculator - Tax Batao">
+    <meta property="og:description" content="Calculate HRA exemption instantly. Free calculator for Section 10(13A) House Rent Allowance exemption.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://taxbatao.com/hra-calculator">
+    <meta property="og:site_name" content="Tax Batao">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HRA Calculator - Tax Batao">
+    <meta name="twitter:description" content="Calculate HRA exemption instantly under Section 10(13A).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8235932614579966" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Tax Batao - HRA Calculator",
+        "url": "https://taxbatao.com/hra-calculator",
+        "description": "Free HRA exemption calculator. Calculate House Rent Allowance tax exemption under Section 10(13A).",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Tax Batao", "item": "https://taxbatao.com" },
+            { "@type": "ListItem", "position": 2, "name": "HRA Calculator", "item": "https://taxbatao.com/hra-calculator" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How is HRA exemption calculated?",
+                "acceptedAnswer": { "@type": "Answer", "text": "HRA exemption is the minimum of three amounts: (1) Actual HRA received from employer, (2) 50% of basic salary for metro cities or 40% for non-metro cities, (3) Rent paid minus 10% of basic salary. The lowest of these three is exempt from tax." }
+            },
+            {
+                "@type": "Question",
+                "name": "Which cities are considered metro for HRA?",
+                "acceptedAnswer": { "@type": "Answer", "text": "For HRA exemption, the four metro cities are Delhi, Mumbai, Kolkata, and Chennai. If you live in any of these cities, you get 50% of basic salary as the HRA limit. All other cities are considered non-metro with a 40% limit." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I claim HRA if I live in my own house?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No, HRA exemption requires that you actually pay rent for the house you live in. If you live in your own house or don't pay rent, you cannot claim HRA exemption. However, you can still claim home loan interest deduction under Section 24b if you have a home loan." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is HRA available under the new tax regime?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No, HRA exemption under Section 10(13A) is not available under the new tax regime. If you want to claim HRA exemption, you must opt for the old tax regime. The new regime offers lower slab rates instead of deductions." }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need rent receipts to claim HRA?",
+                "acceptedAnswer": { "@type": "Answer", "text": "If your annual rent exceeds Rs 1 lakh, you must provide the landlord's PAN number to claim HRA exemption. Rent receipts are recommended for all rent amounts as proof. If rent is paid to parents, a rent agreement and receipts are needed." }
+            }
+        ]
+    }
+    </script>
+    <style>
+        :root {
+            --bg: #0a0a0b;
+            --card: #141416;
+            --card-hover: #1a1a1e;
+            --border: #2a2a2e;
+            --text: #e8e8ec;
+            --text-muted: #8a8a94;
+            --accent: #3b82f6;
+            --accent-dim: #3b82f620;
+            --green: #22c55e;
+            --red: #ef4444;
+            --input-bg: #1a1a1e;
+            --blue: #38bdf8;
+            --orange: #f97316;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        .header { border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; background: var(--bg); z-index: 100; backdrop-filter: blur(20px); }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--text); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .badge { background: var(--accent-dim); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
+        .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 16px 24px 0; font-size: 13px; color: var(--text-muted); }
+        .breadcrumb a { color: var(--accent); text-decoration: none; }
+        .hero { text-align: center; padding: 40px 24px 32px; max-width: 700px; margin: 0 auto; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 38px; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 .hl { color: var(--accent); }
+        .hero p { color: var(--text-muted); font-size: 17px; max-width: 520px; margin: 0 auto 24px; }
+        .trust-bar { display: flex; justify-content: center; gap: 24px; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; }
+        .trust-bar span { display: flex; align-items: center; gap: 6px; }
+        .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+        .calc-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+        .panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+        .panel-title { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+        .panel-title .num { background: var(--accent); color: #fff; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; }
+        .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin: 24px 0 12px; }
+        .section-label:first-of-type { margin-top: 0; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
+        .form-group input { width: 100%; padding: 12px 14px; background: var(--input-bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'Outfit', sans-serif; font-size: 14px; transition: border-color 0.2s; }
+        .form-group input:focus { outline: none; border-color: var(--accent); }
+        .input-with-unit { position: relative; }
+        .input-with-unit .unit { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 14px; pointer-events: none; }
+        .input-with-unit input { padding-left: 30px; }
+        .toggle-group { display: flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
+        .toggle-btn { padding: 10px 14px; background: transparent; border: none; color: var(--text-muted); font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; flex: 1; text-align: center; }
+        .toggle-btn.active { background: var(--accent); color: #fff; font-weight: 600; }
+        .btn-calculate { width: 100%; padding: 16px; background: var(--accent); color: #fff; border: none; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 24px; transition: transform 0.1s, opacity 0.2s; }
+        .btn-calculate:hover { opacity: 0.9; transform: scale(0.995); }
+        .result-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+        .result-card { background: var(--input-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+        .result-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 6px; }
+        .result-card .value { font-size: 18px; font-weight: 700; color: var(--text); }
+        .result-card.highlight { border-color: var(--green); background: #22c55e10; }
+        .result-card.highlight .value { color: var(--green); font-size: 26px; }
+        .result-card.highlight .label { color: var(--green); }
+        .component-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 16px; background: var(--input-bg); border: 1px solid var(--border); border-radius: 10px; margin-bottom: 8px; }
+        .component-row .comp-label { font-size: 13px; color: var(--text-muted); flex: 1; }
+        .component-row .comp-value { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+        .component-row.winner { border-color: var(--green); }
+        .component-row.winner .comp-value { color: var(--green); }
+        .info-section { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
+        .info-section h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 16px; }
+        .info-section p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
+        .info-section ul { color: var(--text-muted); padding-left: 20px; margin-bottom: 16px; font-size: 15px; }
+        .info-section li { margin-bottom: 6px; }
+        .faq-section { max-width: 800px; margin: 0 auto; padding: 20px 24px 60px; }
+        .faq-section h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 16px; }
+        .faq-item { border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; background: var(--card); }
+        .faq-item h3 { font-size: 15px; margin-bottom: 8px; }
+        .faq-item p { font-size: 14px; color: var(--text-muted); margin: 0; }
+        .links-section { max-width: 800px; margin: 0 auto; padding: 20px 24px 40px; }
+        .links-section h2 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 16px; }
+        .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
+        .links-grid a { display: block; padding: 12px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--text); text-decoration: none; font-size: 14px; transition: border-color 0.2s; }
+        .links-grid a:hover { border-color: var(--accent); }
+        .links-grid a .link-sub { display: block; font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+        .footer { text-align: center; padding: 40px 24px; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 13px; }
+        .footer a { color: var(--accent); text-decoration: none; }
+        @media (max-width: 900px) { .calc-section { grid-template-columns: 1fr; } .hero h1 { font-size: 30px; } }
+        @media (max-width: 480px) { .panel { padding: 20px; } .links-grid { grid-template-columns: 1fr; } .trust-bar { gap: 12px; } }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">Tax <span>Batao</span></a>
+        <div class="badge">HRA Calculator</div>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <a href="/">Tax Batao</a> &rsaquo; HRA Calculator
+</div>
+
+<div class="hero">
+    <h1>Calculate Your <span class="hl">HRA Exemption</span></h1>
+    <p>Find out how much of your House Rent Allowance is tax-exempt under Section 10(13A) of the Income Tax Act.</p>
+    <div class="trust-bar">
+        <span><span class="trust-dot"></span> Section 10(13A)</span>
+        <span><span class="trust-dot"></span> Old Regime Only</span>
+        <span><span class="trust-dot"></span> Instant Results</span>
+    </div>
+</div>
+
+<div class="calc-section">
+    <div>
+        <div class="panel">
+            <div class="panel-title"><div class="num">1</div> Your Details</div>
+
+            <div class="section-label">Salary Details</div>
+            <div class="form-group">
+                <label>Basic Salary (Annual)</label>
+                <div class="input-with-unit">
+                    <span class="unit">&#8377;</span>
+                    <input type="text" id="basicSalary" inputmode="numeric" placeholder="6,00,000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Dearness Allowance (Annual, if any)</label>
+                <div class="input-with-unit">
+                    <span class="unit">&#8377;</span>
+                    <input type="text" id="da" inputmode="numeric" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>HRA Received from Employer (Annual)</label>
+                <div class="input-with-unit">
+                    <span class="unit">&#8377;</span>
+                    <input type="text" id="hraReceived" inputmode="numeric" placeholder="2,40,000">
+                </div>
+            </div>
+
+            <div class="section-label">Rent Details</div>
+            <div class="form-group">
+                <label>Actual Rent Paid (Annual)</label>
+                <div class="input-with-unit">
+                    <span class="unit">&#8377;</span>
+                    <input type="text" id="rentPaid" inputmode="numeric" placeholder="3,00,000">
+                </div>
+            </div>
+
+            <div class="section-label">City Type</div>
+            <div class="toggle-group" id="metroToggle">
+                <button class="toggle-btn active" data-metro="yes">Metro (Delhi, Mumbai, Kolkata, Chennai)</button>
+                <button class="toggle-btn" data-metro="no">Non-Metro</button>
+            </div>
+
+            <button class="btn-calculate" id="calcBtn">Calculate HRA Exemption &rarr;</button>
+        </div>
+    </div>
+
+    <div id="resultsPanel">
+        <div class="panel">
+            <div class="panel-title"><div class="num">2</div> HRA Exemption</div>
+
+            <div class="result-card highlight" style="margin-bottom:20px">
+                <div class="label">HRA Exempt from Tax</div>
+                <div class="value" id="hraExempt">&#8377; 0</div>
+            </div>
+
+            <div class="section-label">3 Components (Minimum is Exempt)</div>
+
+            <div class="component-row" id="comp1">
+                <div class="comp-label">(A) Actual HRA Received</div>
+                <div class="comp-value" id="compA">&#8377; 0</div>
+            </div>
+            <div class="component-row" id="comp2">
+                <div class="comp-label">(B) <span id="pctLabel">50%</span> of Basic + DA</div>
+                <div class="comp-value" id="compB">&#8377; 0</div>
+            </div>
+            <div class="component-row" id="comp3">
+                <div class="comp-label">(C) Rent Paid - 10% of Basic + DA</div>
+                <div class="comp-value" id="compC">&#8377; 0</div>
+            </div>
+
+            <div style="margin-top:20px">
+                <div class="result-card">
+                    <div class="label">Taxable HRA</div>
+                    <div class="value" id="hraTaxable">&#8377; 0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="info-section">
+    <h2>How is HRA Exemption Calculated?</h2>
+    <p>HRA exemption under Section 10(13A) is the <strong style="color:var(--text)">minimum</strong> of the following three amounts:</p>
+    <ul>
+        <li><strong style="color:var(--text)">(A) Actual HRA received</strong> from your employer during the year</li>
+        <li><strong style="color:var(--text)">(B) 50% of (Basic + DA)</strong> if you live in a metro city (Delhi, Mumbai, Kolkata, Chennai), or <strong style="color:var(--text)">40%</strong> for non-metro cities</li>
+        <li><strong style="color:var(--text)">(C) Rent paid minus 10% of (Basic + DA)</strong> - the actual rent burden you bear after accounting for a reasonable portion of your salary</li>
+    </ul>
+    <p>The lowest of these three amounts is exempt from tax. The remaining HRA (total HRA received minus exempt amount) is added to your taxable income.</p>
+
+    <h2>Important Points About HRA</h2>
+    <ul>
+        <li>HRA exemption is available <strong style="color:var(--text)">only under the old tax regime</strong>. The new regime does not allow this deduction.</li>
+        <li>You must actually pay rent to claim HRA exemption. Self-occupied house owners cannot claim HRA.</li>
+        <li>If annual rent exceeds Rs 1 lakh, you must provide your landlord's PAN number.</li>
+        <li>Rent paid to parents is allowed for HRA exemption, provided there is a valid rent agreement.</li>
+        <li>DA (Dearness Allowance) is included in the calculation only if it forms part of retirement benefits.</li>
+    </ul>
+</div>
+
+<div style="max-width:800px;margin:0 auto;padding:20px 24px;text-align:center;">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8235932614579966" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
+<div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3>How is HRA exemption calculated?</h3>
+        <p>HRA exemption is the minimum of three amounts: (1) Actual HRA received from employer, (2) 50% of basic salary for metro cities or 40% for non-metro cities, (3) Rent paid minus 10% of basic salary. The lowest of these three is exempt from tax.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Which cities are considered metro for HRA?</h3>
+        <p>For HRA exemption, the four metro cities are Delhi, Mumbai, Kolkata, and Chennai. If you live in any of these cities, you get 50% of basic salary as the HRA limit. All other cities are considered non-metro with a 40% limit.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Can I claim HRA if I live in my own house?</h3>
+        <p>No, HRA exemption requires that you actually pay rent for the house you live in. If you live in your own house or don't pay rent, you cannot claim HRA exemption.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Is HRA available under the new tax regime?</h3>
+        <p>No, HRA exemption under Section 10(13A) is not available under the new tax regime. If you want to claim HRA exemption, you must opt for the old tax regime.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Do I need rent receipts to claim HRA?</h3>
+        <p>If your annual rent exceeds Rs 1 lakh, you must provide the landlord's PAN number to claim HRA exemption. Rent receipts are recommended for all rent amounts as proof.</p>
+    </div>
+</div>
+
+<div class="links-section">
+    <h2>Related Calculators & Guides</h2>
+    <div class="links-grid">
+        <a href="/">Income Tax Calculator<span class="link-sub">Old vs New Regime comparison</span></a>
+        <a href="/income-tax-slabs">Tax Slabs FY 2025-26<span class="link-sub">Complete slab rates</span></a>
+        <a href="/old-vs-new-regime">Old vs New Regime<span class="link-sub">Which is better for you?</span></a>
+        <a href="/section-80c-deductions">Section 80C Guide<span class="link-sub">PPF, ELSS, LIC & more</span></a>
+        <a href="/tax-saving-tips">Tax Saving Tips<span class="link-sub">For salaried employees</span></a>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Built by TUD Innovations Pvt Ltd. HRA calculations are based on Section 10(13A) of the Income Tax Act. Consult a tax professional for personalized advice.</p>
+    <p style="margin-top:8px"><a href="/privacy">Privacy Policy</a></p>
+</footer>
+
+<script>
+var isMetro = true;
+
+function formatCurrency(num) {
+    return new Intl.NumberFormat('en-IN').format(Math.round(num));
+}
+
+function getRawNumber(id) {
+    var el = document.getElementById(id);
+    if (!el) return 0;
+    return parseInt(el.value.replace(/[^0-9]/g, '')) || 0;
+}
+
+function formatAmountInput(id) {
+    var input = document.getElementById(id);
+    var raw = input.value.replace(/[^0-9]/g, '');
+    if (raw) input.value = new Intl.NumberFormat('en-IN').format(parseInt(raw));
+    calculate();
+}
+
+function calculate() {
+    var basic = getRawNumber('basicSalary');
+    var da = getRawNumber('da');
+    var hraReceived = getRawNumber('hraReceived');
+    var rentPaid = getRawNumber('rentPaid');
+
+    if (basic <= 0 || hraReceived <= 0) return;
+
+    var basicDA = basic + da;
+    var pct = isMetro ? 0.50 : 0.40;
+
+    var compA = hraReceived;
+    var compB = Math.round(basicDA * pct);
+    var compC = Math.max(0, rentPaid - Math.round(basicDA * 0.10));
+    var exempt = Math.min(compA, compB, compC);
+    var taxable = Math.max(0, hraReceived - exempt);
+
+    document.getElementById('hraExempt').textContent = '\u20B9 ' + formatCurrency(exempt);
+    document.getElementById('compA').textContent = '\u20B9 ' + formatCurrency(compA);
+    document.getElementById('compB').textContent = '\u20B9 ' + formatCurrency(compB);
+    document.getElementById('compC').textContent = '\u20B9 ' + formatCurrency(compC);
+    document.getElementById('hraTaxable').textContent = '\u20B9 ' + formatCurrency(taxable);
+    document.getElementById('pctLabel').textContent = isMetro ? '50%' : '40%';
+
+    // Highlight winner
+    var rows = [document.getElementById('comp1'), document.getElementById('comp2'), document.getElementById('comp3')];
+    var values = [compA, compB, compC];
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].className = 'component-row' + (values[i] === exempt ? ' winner' : '');
+    }
+}
+
+// Metro toggle
+document.getElementById('metroToggle').addEventListener('click', function(e) {
+    var btn = e.target.closest('.toggle-btn');
+    if (!btn) return;
+    this.querySelectorAll('.toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    isMetro = btn.dataset.metro === 'yes';
+    calculate();
+});
+
+// Amount inputs
+['basicSalary', 'da', 'hraReceived', 'rentPaid'].forEach(function(id) {
+    document.getElementById(id).addEventListener('input', function() { formatAmountInput(id); });
+});
+
+// Calculate button
+document.getElementById('calcBtn').addEventListener('click', function() {
+    calculate();
+    if (window.innerWidth < 900) document.getElementById('resultsPanel').scrollIntoView({ behavior: 'smooth' });
+});
+
+// Init
+document.getElementById('basicSalary').value = '6,00,000';
+document.getElementById('hraReceived').value = '2,40,000';
+document.getElementById('rentPaid').value = '3,00,000';
+calculate();
+</script>
+
+<script src="https://gstbatao.com/batao-banao-widget.js"></script>
+</body>
+</html>
