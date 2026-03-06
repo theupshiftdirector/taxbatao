@@ -238,7 +238,6 @@ function getTopicLinks() {
 
 function getFooter() {
     return `<footer class="footer"><p>Built by TUD Innovations Pvt Ltd. Tax calculations based on standard income tax rules for FY 2025-26.</p><p style="margin-top:8px"><a href="/privacy">Privacy Policy</a></p></footer>
-<script src="https://gstbatao.com/batao-banao-widget.js"><\/script>`;
 }
 
 function getAdBlock() {
