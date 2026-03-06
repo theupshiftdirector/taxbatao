@@ -2,7 +2,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE = __dirname;
+const DIST = path.join(__dirname, 'dist');
+const BASE = DIST;
 
 // ===================== TAX CONFIG =====================
 const TAX_CONFIG = {
@@ -596,6 +597,30 @@ function generateSitemap() {
 // ===================== MAIN BUILD =====================
 console.log('Generating Tax Batao pages...\n');
 
+// Create dist directory
+mkdirp(DIST);
+
+// Copy static files to dist
+const STATIC_FILES = ['index.html', 'about.html', 'privacy.html', 'ads.txt', 'robots.txt', '855619084ca64ac9afe95c0b2b58894d.txt'];
+STATIC_FILES.forEach(function(f) {
+    var src = path.join(__dirname, f);
+    if (fs.existsSync(src)) {
+        fs.copyFileSync(src, path.join(DIST, f));
+    }
+});
+// Copy static subdirectories (hra-calculator, hra-exemption-rules)
+['hra-calculator', 'hra-exemption-rules'].forEach(function(dir) {
+    var src = path.join(__dirname, dir);
+    if (fs.existsSync(src)) {
+        var destDir = path.join(DIST, dir);
+        mkdirp(destDir);
+        fs.readdirSync(src).forEach(function(f) {
+            fs.copyFileSync(path.join(src, f), path.join(destDir, f));
+        });
+    }
+});
+console.log('  Copied static files to dist/');
+
 // Income level pages
 INCOME_LEVELS.forEach(generateIncomePage);
 console.log('  Generated ' + INCOME_LEVELS.length + ' income level pages');
@@ -609,3 +634,4 @@ generateSitemap();
 console.log('  Generated sitemap.xml');
 
 console.log('\nDone! Total: ' + (INCOME_LEVELS.length + TOPIC_PAGES.length) + ' pages + sitemap');
+console.log('Output: ' + DIST);

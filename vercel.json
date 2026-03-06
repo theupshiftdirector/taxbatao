@@ -1,5 +1,6 @@
 {
-  "outputDirectory": ".",
+  "buildCommand": "node generate-pages.js",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false
 }
