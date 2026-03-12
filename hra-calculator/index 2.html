@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="Calculate HRA exemption instantly under Section 10(13A).">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8235932614579966" crossorigin="anonymous"></script>
     <script type="application/ld+json">
     {
@@ -85,31 +85,31 @@
     </script>
     <style>
         :root {
-            --bg: #0a0a0b;
-            --card: #141416;
-            --card-hover: #1a1a1e;
-            --border: #2a2a2e;
-            --text: #e8e8ec;
-            --text-muted: #8a8a94;
-            --accent: #ff2d00;
-            --accent-dim: #ff2d0020;
-            --green: #22c55e;
-            --red: #ef4444;
-            --input-bg: #1a1a1e;
+            --bg: #09090b;
+            --card: #18181b;
+            --card-hover: #27272a;
+            --border: #27272a;
+            --text: #fafafa;
+            --text-muted: #a1a1aa;
+            --accent: #f97316;
+            --accent-dim: #f9731620;
+            --green: #34d399;
+            --red: #f87171;
+            --input-bg: #27272a;
             --blue: #38bdf8;
-            --orange: #ff2d00;
+            --orange: #f97316;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Geist', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
+        body { font-family: 'Sora', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; min-height: 100vh; }
         .header { border-bottom: 1px solid var(--border); padding: 20px 0; position: sticky; top: 0; background: var(--bg); z-index: 100; backdrop-filter: blur(20px); }
         .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-family: 'Geist', sans-serif; font-size: 24px; color: var(--text); text-decoration: none; }
+        .logo { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 24px; color: var(--text); text-decoration: none; }
         .logo span { color: var(--accent); }
         .badge { background: var(--accent-dim); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; }
         .breadcrumb { max-width: 1200px; margin: 0 auto; padding: 16px 24px 0; font-size: 13px; color: var(--text-muted); }
         .breadcrumb a { color: var(--accent); text-decoration: none; }
         .hero { text-align: center; padding: 40px 24px 32px; max-width: 700px; margin: 0 auto; }
-        .hero h1 { font-family: 'Geist', sans-serif; font-size: 38px; line-height: 1.15; margin-bottom: 16px; }
+        .hero h1 { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 38px; line-height: 1.15; margin-bottom: 16px; }
         .hero h1 .hl { color: var(--accent); }
         .hero p { color: var(--text-muted); font-size: 17px; max-width: 520px; margin: 0 auto 24px; }
         .trust-bar { display: flex; justify-content: center; gap: 24px; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; }
@@ -117,21 +117,21 @@
         .trust-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
         .calc-section { max-width: 1200px; margin: 0 auto; padding: 0 24px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
         .panel { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
-        .panel-title { font-family: 'Geist', sans-serif; font-size: 22px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
-        .panel-title .num { background: var(--accent); color: #fff; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Geist', sans-serif; font-size: 14px; font-weight: 700; }
+        .panel-title { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 22px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+        .panel-title .num { background: var(--accent); color: #fff; width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 14px; font-weight: 700; }
         .section-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--accent); margin: 24px 0 12px; }
         .section-label:first-of-type { margin-top: 0; }
         .form-group { margin-bottom: 16px; }
         .form-group label { display: block; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-bottom: 6px; }
-        .form-group input { width: 100%; padding: 12px 14px; background: var(--input-bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'Geist', sans-serif; font-size: 14px; transition: border-color 0.2s; }
+        .form-group input { width: 100%; padding: 12px 14px; background: var(--input-bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 14px; transition: border-color 0.2s; }
         .form-group input:focus { outline: none; border-color: var(--accent); }
         .input-with-unit { position: relative; }
         .input-with-unit .unit { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 14px; pointer-events: none; }
         .input-with-unit input { padding-left: 30px; }
         .toggle-group { display: flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 16px; }
-        .toggle-btn { padding: 10px 14px; background: transparent; border: none; color: var(--text-muted); font-family: 'Geist', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; flex: 1; text-align: center; }
+        .toggle-btn { padding: 10px 14px; background: transparent; border: none; color: var(--text-muted); font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; flex: 1; text-align: center; }
         .toggle-btn.active { background: var(--accent); color: #fff; font-weight: 600; }
-        .btn-calculate { width: 100%; padding: 16px; background: var(--accent); color: #fff; border: none; border-radius: 12px; font-family: 'Geist', sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 24px; transition: transform 0.1s, opacity 0.2s; }
+        .btn-calculate { width: 100%; padding: 16px; background: var(--accent); color: #fff; border: none; border-radius: 12px; font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 24px; transition: transform 0.1s, opacity 0.2s; }
         .btn-calculate:hover { opacity: 0.9; transform: scale(0.995); }
         .result-cards { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
         .result-card { background: var(--input-bg); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
@@ -146,17 +146,17 @@
         .component-row.winner { border-color: var(--green); }
         .component-row.winner .comp-value { color: var(--green); }
         .info-section { max-width: 800px; margin: 0 auto; padding: 40px 24px; }
-        .info-section h2 { font-family: 'Geist', sans-serif; font-size: 24px; margin-bottom: 16px; }
+        .info-section h2 { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 24px; margin-bottom: 16px; }
         .info-section p { color: var(--text-muted); margin-bottom: 16px; font-size: 15px; }
         .info-section ul { color: var(--text-muted); padding-left: 20px; margin-bottom: 16px; font-size: 15px; }
         .info-section li { margin-bottom: 6px; }
         .faq-section { max-width: 800px; margin: 0 auto; padding: 20px 24px 60px; }
-        .faq-section h2 { font-family: 'Geist', sans-serif; font-size: 24px; margin-bottom: 16px; }
+        .faq-section h2 { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 24px; margin-bottom: 16px; }
         .faq-item { border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; background: var(--card); }
         .faq-item h3 { font-size: 15px; margin-bottom: 8px; }
         .faq-item p { font-size: 14px; color: var(--text-muted); margin: 0; }
         .links-section { max-width: 800px; margin: 0 auto; padding: 20px 24px 40px; }
-        .links-section h2 { font-family: 'Geist', sans-serif; font-size: 22px; margin-bottom: 16px; }
+        .links-section h2 { font-family: 'Sora', system-ui, -apple-system, sans-serif; font-size: 22px; margin-bottom: 16px; }
         .links-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
         .links-grid a { display: block; padding: 12px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; color: var(--text); text-decoration: none; font-size: 14px; transition: border-color 0.2s; }
         .links-grid a:hover { border-color: var(--accent); }
@@ -334,7 +334,7 @@
 <footer class="footer">
     <p>Built by TUD Innovations Pvt Ltd. HRA calculations are based on Section 10(13A) of the Income Tax Act. Consult a tax professional for personalized advice.</p>
     <p style="margin-top:8px"><a href="/privacy">Privacy Policy</a></p>
-<p style="font-size:10px;color:var(--text-muted);margin-top:4px">A <a href="https://tuditools.com" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none">TudiTools</a> product &mdash; <a href="https://tuditools.com" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none">tuditools.com</a></p></footer>
+<p style="font-size:10px;color:var(--text-muted);margin-top:4px">A <a href="https://tuditools.com" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none">TUDITOOLS</a> Product &vert; <a href="https://tuditools.com" target="_blank" rel="noopener noreferrer" style="color:var(--text-muted);text-decoration:none">tuditools.com</a></p></footer>
 
 <script>
 var isMetro = true;
