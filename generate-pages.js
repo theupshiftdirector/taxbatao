@@ -103,6 +103,20 @@ const TOPIC_PAGES = [
 // ===================== UTILITY FUNCTIONS =====================
 function mkdirp(dir) { fs.mkdirSync(dir, { recursive: true }); }
 
+// Recursively copies a directory and its contents
+function copyDirRecursive(src, dest) {
+  mkdirp(dest);
+  fs.readdirSync(src, { withFileTypes: true }).forEach(function(entry) {
+    var srcPath = path.join(src, entry.name);
+    var destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDirRecursive(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  });
+}
+
 function formatINR(n) { return new Intl.NumberFormat('en-IN').format(Math.round(n)); }
 
 function formatINRShort(n) {
@@ -621,6 +635,16 @@ STATIC_FILES.forEach(function(f) {
     }
 });
 console.log('  Copied static files to dist/');
+
+// Copy blog directory
+var blogSrcDir = path.join(__dirname, 'blog');
+if (fs.existsSync(blogSrcDir)) {
+    copyDirRecursive(blogSrcDir, path.join(DIST, 'blog'));
+    var blogPosts = fs.readdirSync(blogSrcDir).filter(function(f) {
+        return f !== 'index.html' && fs.existsSync(path.join(blogSrcDir, f, 'index.html'));
+    });
+    console.log('  Copied blog/ directory (' + blogPosts.length + ' posts)');
+}
 
 // Income level pages
 INCOME_LEVELS.forEach(generateIncomePage);
