@@ -96,13 +96,13 @@
             --border: #27272a;
             --text: #fafafa;
             --text-muted: #a1a1aa;
-            --accent: #f97316;
-            --accent-dim: #f9731620;
+            --accent: #E24B4A;
+            --accent-dim: #E24B4A20;
             --green: #34d399;
             --red: #f87171;
             --input-bg: #27272a;
             --blue: #38bdf8;
-            --orange: #f97316;
+            --orange: #E24B4A;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -320,7 +320,7 @@
         }
         .savings-banner.show { display: block; }
         .savings-banner.new-wins { background: #22c55e18; color: var(--green); border: 1px solid #22c55e40; }
-        .savings-banner.old-wins { background: #f9731618; color: var(--accent); border: 1px solid #f9731640; }
+        .savings-banner.old-wins { background: #E24B4A18; color: var(--accent); border: 1px solid #E24B4A40; }
         .savings-banner.tie { background: var(--input-bg); color: var(--text-muted); border: 1px solid var(--border); }
 
         .regime-comparison {
@@ -702,7 +702,7 @@
                 </div>
                 <div class="chart-legend">
                     <div class="legend-item">
-                        <div class="legend-dot" style="background:#f97316"></div>
+                        <div class="legend-dot" style="background:#E24B4A"></div>
                         <div class="legend-info">
                             <div class="legend-label">Income Tax + Cess</div>
                             <div class="legend-value" id="legendTax">&#8377; 0</div>
@@ -845,7 +845,7 @@
     </div>
 </div>
 
-<footer class="footer">
+<footer style="border-top:3px solid #F2A623" class="footer">
     <div style="max-width:800px;margin:0 auto">
         <p style="margin-bottom:4px;font-size:12px;color:var(--text-muted)">Tax calculations are based on standard income tax rules for FY 2025-26 as per the Income Tax Act, 1961. Actual tax liability may vary. Consult a tax professional for personalized advice.</p>
         <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--border)">
@@ -1070,7 +1070,7 @@ function drawPieChart(tax, takeHome) {
     var total = tax + takeHome;
     if (total <= 0) return;
     var segments = [
-        { value: tax, color: '#f97316' },
+        { value: tax, color: '#E24B4A' },
         { value: takeHome, color: '#22c55e' }
     ];
     var startAngle = -Math.PI / 2, gap = 0.03;
